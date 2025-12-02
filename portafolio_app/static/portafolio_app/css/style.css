@@ -1,0 +1,119 @@
+
+:root {
+    /* Paleta Inspirada en el Boceto */
+    --color-fondo: #555555; /* Gris Oscuro (FONDO DEL BODY) */
+    --color-texto: #111111; /* Negro (NAVBAR y PARTE OSCURA) */
+    --color-section-light: #F0F0F0; /* Gris muy claro para las secciones de contenido */
+    
+    /* Acentos */
+    --color-acento-principal: #00BCD4; 
+    --color-acento-secundario: #FFC107; 
+    --color-iconos: #E91E63; 
+    
+    /* SOBRESCRIBIR VARIABLES DE BOOTSTRAP */
+    --bs-body-bg: var(--color-fondo); 
+    --bs-body-color: white; /* Texto del body es blanco */
+    --bs-primary: var(--color-acento-principal);
+    --bs-secondary: var(--color-acento-secundario);
+    --bs-dark: var(--color-texto); 
+}
+
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-fondo);
+    color: white; 
+    position: relative; 
+    z-index: 1;
+}
+
+
+a {
+    color: var(--color-acento-principal);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-acento-secundario);
+}
+
+/* Navbar y Footer: Fondo oscuro, Texto blanco */
+#mainNav, #contacto {
+    background-color: var(--color-texto) !important; 
+    color: white; 
+}
+
+.navbar-brand .text-white, 
+.navbar-nav .nav-link {
+    color: white !important; 
+}
+
+
+#photo-header {
+    background-color: var(--color-texto) !important; 
+    color: white;
+    position: relative; 
+    z-index: 2;
+    padding-top: 30px;
+    padding-bottom: 50px; 
+    
+    /* PROPIEDAD CLAVE: Crea un borde inferior diagonal */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 90%); 
+}
+
+.img-circular-perfil {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--color-acento-secundario); /* Borde Amarillo */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+    z-index: 10; 
+    position: relative;
+}
+
+
+
+#inicio, #proyectos, #sobre-mi, #habilidades, #contacto-form {
+    background-color: var(--color-section-light) !important; 
+    position: relative;
+    z-index: 1;
+}
+
+
+#inicio *, #proyectos *, #sobre-mi *, #habilidades *, #contacto-form * {
+    color: var(--color-texto) !important; 
+} 
+
+
+.text-primary {
+    color: var(--color-acento-principal) !important;
+}
+
+.text-secondary {
+    color: var(--color-texto) !important;
+}
+
+
+.bi {
+    color: var(--color-iconos) !important;
+}
+
+
+.card {
+    border-radius: 8px;
+    background-color: #FAFAFA !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.badge {
+    color: white !important;
+}
